@@ -1,0 +1,573 @@
+@import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Gilroy-Bold', sans-serif; */
+  /* font-family: 'Gilroy-Heavy', sans-serif; */
+  /* font-family: 'Gilroy-Medium', sans-serif; */
+  /* font-family: "Gilroy-Regular", sans-serif; */
+}
+body {
+  background-color: #000000;
+  font-family: 'Gilroy-Light', sans-serif;
+  color: white;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.homepage {
+  width: 100%;
+  height: 87vh;
+  color: black;
+  overflow: hidden;
+  position: relative;
+}
+.searchpage{
+  width: 100%;
+  height: 87vh;
+  color: black;
+  overflow: hidden;
+  position: relative;
+  /* background-color: #9a9a9a; */
+}
+.homepage .main_page {
+  width: 98.5%;
+  background-color: #121212;
+  height: 98%;
+  margin:7px auto;
+  border-radius: 8px;
+  color: white;
+  position: absolute;
+  overflow-y: scroll;
+}
+ .main_searchpage{
+  width: 98.5%;
+  background-color: #121212;
+  margin:7px auto;
+  border-radius: 8px;
+  color: white;
+  height: 100%;
+}
+
+.homepage .main_page::-webkit-scrollbar ,.Art_Sec::-webkit-scrollbar ,.main_sec::-webkit-scrollbar,.card_section::-webkit-scrollbar ,.main_searchpage::-webkit-scrollbar ,.song_Section::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.homepage .main_page {
+  scrollbar-width: none;
+}
+.main_sec{
+  position: absolute;
+  top: 5rem;
+  bottom: 0;
+  width: 100%;
+  border-radius: inherit;
+  height:auto ;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+}
+.main_sec .CARD{
+  margin: 7px;
+  overflow: hidden;
+}
+/* song_Section */
+.song_Section{
+  width: 98%;
+  margin: 70px auto;
+  overflow-y: scroll;
+  border-radius: 8px;
+}
+ .song_Section .Popular_Radio{
+  width: 100%;
+  height: auto;
+  color: white;
+}
+.Popular_Radio h2{
+  margin: 42px 18px;
+  font-size: 20px;
+  font-weight: 800;
+}
+.card_section{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  height: 50vh;
+  align-items: center;
+  overflow-x: scroll;
+}
+.CARD{
+  width: 220px;
+  margin: 0 15px;
+  border-radius: 8px;
+  height: 300px;
+  background-color: #181818;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+.overlay{
+  position: absolute;
+  bottom: 5px;
+  right: 36px;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+}
+.CARD:hover > .overlay{
+  bottom: 100px;
+  opacity: 1;
+}
+.CARD .details h1{
+  font-size: 1rem;
+  margin: 8px 10px;
+}
+.CARD .details p {
+  margin: 10px ;
+  color: gray;
+  line-height: 15px;
+  font-size: 0.9rem;
+}
+.CARD:hover{
+  background-color: #282828;
+}
+.CARD img{
+  width: 180px;
+  height: 180px;
+  align-items: center;
+  border-radius: 8px;
+  margin-top: 1rem;
+  margin-left:1.25rem;
+}
+/* fixed nav left and right btn */
+.nav .flex_nav{
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  width: 70%;
+  height: 80px;
+  left: 30%;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex_nav .link_button{
+  display: flex;
+  gap: 15px;
+  margin-left: 45px;
+  align-items: center;
+}
+/* serachbar box */
+.searchbar_box{
+  height: 52px;
+  width: 480px;
+  border-radius: 45px;
+  background-color:#000000;
+  display: flex;
+  border: 1px solid grey;
+  align-items: center;
+}
+.searchbar_box input{
+  width: 80%;
+  padding: 10px ;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #9a9a9a;
+  font-weight: 800;
+  font-size: 1rem;
+}
+.searchbar_box .logo{
+  margin-left: 10px;
+  
+}
+/* ends here */
+.link_button button{
+  padding: 8px 10px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+  border: 1px solid grey;
+
+}
+.right_button{
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+.right_button button{
+  outline: none;
+  padding: 8px 15px;
+  border: none;
+  letter-spacing: 1.5px;
+  border: 1px solid grey;
+}
+.right_button .btn_M div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.right_button .btn_x ,
+.btn_M {
+  border-radius: 25px;
+  margin-left: 0px;
+  margin-right: 15px;
+  background-color: #000000;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+}
+
+.btn_F{
+  border-radius: 50%;
+  margin: 0 10px;
+  font-size: 0.8rem;
+  background-color: #000000;
+  color: white;
+}
+
+/* player style code */
+.player{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 13%;
+  overflow: hidden;
+}
+.main_player{
+  width: 99%;
+  height: 88%;
+  margin:5px auto;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.main_player .first{
+  display: flex;
+  align-items: center;
+}
+.main_player .first img{
+ width: 50px;
+ margin-left:1rem;
+ object-fit: cover;
+ border-radius: 5px;
+ margin-right: 18px;
+}
+.main_player .first  h2{
+  font-size: 1.5rem;
+}
+.main_player .first small{
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+.main_player .first  .like{
+  margin-left: 2rem;
+}
+.player .seconds{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player .seconds .player_btn{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.player .seconds .player_btn .pb{
+  width: 45px;
+  cursor: pointer;
+}
+.player .progress{
+  display:flex;
+  align-items: center;
+}
+.player .progress span{
+  font-size: 0.8rem;
+  margin: 0 15px;
+}
+.player .progress input{
+  margin-top: 5px;
+  cursor: pointer;
+}
+.player .third{
+  display: flex;
+  gap: 10px;
+  margin-left: -3rem;
+}
+.player .third .volume{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 1rem;
+}
+/* .player .progress .progress-bar */
+
+.player .seconds .progress{
+  display: flex;
+  align-items: center;
+}
+
+/* ends here */
+.sidebar {
+  width: 30%;
+  height: 100vh;
+  /* color: white; */
+  overflow: hidden;
+  color: #9a9a9a;
+}
+.first_bar {
+  background-color: #121212;
+  width: 98%;
+  margin: 8px auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.first_bar div {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.first_bar div span {
+  margin: 0 18px;
+  display: flex;
+  align-items: center;
+}
+.first_bar div h2 {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+.main {
+  width: 98%;
+  margin: 0 auto;
+  height: 65%;
+  background-color: #121212;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.main .second_bar {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex_left {
+  margin-left: 18px;
+  display: flex;
+  letter-spacing: 1px;
+}
+.flex_left h3 {
+  margin-left: 18px;
+  font-size: 1.1rem;
+}
+.logo {
+  font-size: 1.5rem;
+}
+.flex_left svg {
+  width: 25px;
+}
+.flex_Right {
+  margin-right: 18px;
+}
+.flex_Right .logo {
+  margin: 0 10px;
+  font-size: 1.3rem;
+}
+.third_bar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.third_bar span {
+  margin-left: 25px;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.fourth_bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.searchbar {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.searchbar span {
+  font-size: 1.2rem;
+}
+.searchbar input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 8px;
+  color: #9a9a9a;
+}
+.recents {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+.recents .logo {
+  font-size: 1.5rem;
+  margin-top: 4px;
+  margin-left: 8px;
+}
+.fifth_bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.artist_card {
+  width: 98%;
+  height: 70px;
+  margin: 10px auto;
+  background-color: #000000;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.artist_card img {
+  width: 50px;
+  border-radius: 50px;
+  margin: 0 8px;
+  object-fit: cover;
+  position: relative;
+}
+.verify_icon{
+  position: absolute;
+  left: 3.2rem;
+  margin-bottom: 2rem;
+}
+.artist_card .details{
+  margin-left: 10px;
+}
+.artist_card .details h3{
+  font-size: 1rem;
+}
+.artist_card .details span{
+  font-size: 0.8rem;
+  color: goldenrod;
+  letter-spacing: 1px;
+}
+/* artist pages */
+@font-face {
+  font-family:myfont ;
+  src: url(../public/fonts/LEMONMILK-Regular.otf);
+}
+.ArtistsPage{
+  width:99%;
+  height: 85vh;
+  margin-top: 0.5rem;
+  color: black;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #121212;
+  font-family: myfont;
+}
+.Art_Sec{
+  width: 100%;
+  height: inherit;
+  overflow-y: scroll;
+}
+.Art_Sec .title_bar{
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  color: white;
+  position: relative;
+  z-index: 0;
+}
+.Art_Sec .img{
+  width: 100%;
+  height: 240px;
+  position: absolute;
+  z-index: -999;
+  top: 0;
+}
+.Art_Sec .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Art_Sec .title_bar h3{
+  margin: 15px 25px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.Art_Sec .title_bar h1{
+  font-size: 5.5rem;
+  margin:-15px 15px;
+  letter-spacing: 2px;
+}
+.Art_Sec .title_bar h4{
+margin: 0 18px;
+}
+.songlist{
+  width: 100%;
+  background:linear-gradient( to bottom ,#423f3b ,#121212 );
+  border-top-right-radius:0px ;
+  border-top-left-radius: 0px;
+  height: auto;
+}
+.songlist table {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.songlist tr th{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: relative;
+}
+.songlist tr td{
+  padding:  8px 0;
+  text-align: center;
+}
+.songlist tr:hover{
+  background-color: #666564;
+}
+.lmp{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-right: 1.5rem;
+}
+
+.songlist tr td img{
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 0 15px;
+}
+
+
+
+
+
+
+
