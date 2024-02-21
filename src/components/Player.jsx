@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { BsRepeat, BsRepeat1, BsPlayBtnFill } from "react-icons/bs";
 import { TbPlayerSkipBackFilled, TbPlayerSkipForwardFilled } from "react-icons/tb";
 import { IoPlayCircle, IoPauseCircle } from "react-icons/io5";
@@ -9,8 +9,9 @@ import { HiQueueList } from "react-icons/hi2";
 import { useSong } from '../utils/Context';
 const Player = () => {
     const { currentSong ,songDetails } = useSong();
+    const VolumeRef = useRef();
     useEffect(()=>{
-
+    
     },[])
     const [isPlaying, setIsPlaying] = useState(false);
     const [progress, setProgress] = useState(0);
@@ -25,6 +26,10 @@ const Player = () => {
         }
         setIsPlaying(!isPlaying);
     };
+
+    useEffect(()=>{
+      audioRef.current.volume = VolumeRef.current.value ;
+    },[audioRef])
 
     const timeUpdateHandler = (e) => {
         const current = e.target.currentTime;
@@ -44,7 +49,7 @@ const Player = () => {
         setDuration(currentTime);
         setcurrDuration(totalDuration)
     };
-
+  
     const dragHandler = (e) => {
         const draggedTime = (e.target.value * audioRef.current.duration) / 100;
         audioRef.current.currentTime = draggedTime;
@@ -106,7 +111,7 @@ const Player = () => {
                     <FaSlideshare size={"18px"} />
                     <div className="volume">
                         <FaVolumeOff size={"18px"} />
-                        <input type="range" name="" id="" />
+                        <input type="range" max={1} min={0} step={0.2} ref={VolumeRef}/>
                         <CgMiniPlayer size={"18px"} />
                     </div>
                 </div>
